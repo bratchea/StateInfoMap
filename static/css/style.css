@@ -22,3 +22,14 @@ path {
 path:hover {
   fill: #3d5467 !important;
 }
+
+.state_table {
+  border: 1px solid;
+  border-color: black;
+}
+
+td,
+th {
+  border: 1px solid;
+  border-color: black;
+}
