@@ -26,6 +26,7 @@ path:hover {
 .state_table {
   border: 1px solid;
   border-color: black;
+  border-collapse: collapse;
 }
 
 td,

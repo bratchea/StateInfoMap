@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    with open("static/images/us.svg") as um:
+    with open("frontend/static/images/us.svg") as um:
         us_map = um.read()
 
     return render_template("index.j2", us_map=us_map)
