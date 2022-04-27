@@ -12,6 +12,11 @@ def home():
     return render_template("index.j2", us_map=us_map)
 
 
+@app.route("/list")
+def list_view():
+    return render_template("list_view.html")
+
+
 @app.route("/state/<state>")
 def state(state):
     q_args = request.args

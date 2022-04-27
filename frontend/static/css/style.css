@@ -34,3 +34,28 @@ th {
   border: 1px solid;
   border-color: black;
 }
+
+.bottom-right {
+  position: fixed;
+  text-decoration: underline;
+  font-size: large;
+  color: black;
+  right: 0px;
+  bottom: 0px;
+}
+
+a {
+  color: #3d5467;
+}
+
+.row {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
+p {
+  text-decoration: underline;
+}
