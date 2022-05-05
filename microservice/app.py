@@ -1,12 +1,14 @@
-from flask import Flask
+from fastapi import FastAPI
+from models.state import State
 
 
-app = Flask(__name__)
+app = FastAPI()
 
-@app.route("/<state>")
+@app.get("/states/{state}")
 def get_state_info(state):
-    return f"State Info Requested: {state}"
+    return {"message": f"State Info Requested: {state}"}
 
 
-if __name__ == "__main__":
-    app.run(host="localhost", port=50000, debug=True)
+@app.post("/states/{state}")
+def add_state_info(state):
+    return {"message": f"Added {state}"}
