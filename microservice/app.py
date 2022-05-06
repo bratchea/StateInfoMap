@@ -29,9 +29,13 @@ def all_states():
     return {"message": "Not Implemented"}
 
 
-@app.post("/states", status_code=201)
-async def add_state_info(state: State):
+@app.post("/states/", status_code=201)
+def add_state_info(state: State):
     """
     Add a state to the firestore db
     """
-    return state
+    client = firestore.Client()
+    state_ref = client.collection("states").document(state.name.split("_")[0])
+    state_doc = state_ref.set(state.dict())
+
+    return state.dict()
