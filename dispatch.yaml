@@ -1,6 +1,6 @@
 dispatch:
   # send traffic to frontend
-  - url: /*
+  - url: */us*
     service: default
 
   # send traffic to backend
