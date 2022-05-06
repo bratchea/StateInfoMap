@@ -29,7 +29,7 @@ class StateScraper:
         if state not in StateScraper.STATES:
             raise InvalidStateName
 
-        state_info = {"state": state}
+        state_info = {"name": state}
 
         resp = requests.get(f"{base_url}/{state.title()}")
         soup = BeautifulSoup(resp.content, "html.parser")
