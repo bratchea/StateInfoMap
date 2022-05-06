@@ -1,0 +1,8 @@
+runtime: python39
+
+service: backend-api
+
+# F1 is default
+instance_class: F1
+
+entrypoint: gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:app

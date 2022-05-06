@@ -1,0 +1,8 @@
+dispatch:
+  # send traffic to frontend
+  - url: /*
+    service: default
+
+  # send traffic to backend
+  - url: */states/*
+    service: backend-api

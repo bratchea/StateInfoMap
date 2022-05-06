@@ -1,26 +1,24 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/us")
 def home():
-    with open("frontend/static/images/us.svg") as um:
+    with open("static/images/us.svg") as um:
         us_map = um.read()
 
     return render_template("index.j2", us_map=us_map)
 
 
-@app.route("/list")
+@app.route("/us/list")
 def list_view():
-    return render_template("list_view.html")
+    return render_template("list_view.j2")
 
 
-@app.route("/state/<state>")
+@app.route("/us/state/<state>")
 def state(state):
-    q_args = request.args
-
     # make call to state info micro service here
 
     info = {
