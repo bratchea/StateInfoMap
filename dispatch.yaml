@@ -1,8 +1,10 @@
 dispatch:
-  # send traffic to frontend
-  - url: */us*
+  - url: "state-info-proj.uk.r.appspot.com/"
+    service: default
+
+  - url: "state-info-proj.uk.r.appspot.com/us"
     service: default
 
   # send traffic to backend
-  - url: */states/*
+  - url: "backend-api-dot-state-info-proj.uk.r.appspot.com/*"
     service: backend-api

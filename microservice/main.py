@@ -1,3 +1,5 @@
+import uvicorn
+
 from fastapi import FastAPI, HTTPException
 from google.cloud import firestore
 from typing import Dict, Any
@@ -18,7 +20,8 @@ def get_state_info(state: str):
 
     if not state_doc.exists:
         raise HTTPException(status_code=404, detail=f"The State {state} Not Found")
-    return state
+    
+    return State(**state_doc.to_dict()).dict()
 
 
 @app.get("/states")
@@ -37,5 +40,7 @@ def add_state_info(state: State):
     client = firestore.Client()
     state_ref = client.collection("states").document(state.name.split("_")[0])
     state_doc = state_ref.set(state.dict())
-
     return state.dict()
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="localhost", port=50000)
