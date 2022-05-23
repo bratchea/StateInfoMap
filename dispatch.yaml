@@ -2,7 +2,7 @@ dispatch:
   - url: "state-info-proj.uk.r.appspot.com/"
     service: default
 
-  - url: "state-info-proj.uk.r.appspot.com/us"
+  - url: "state-info-proj.uk.r.appspot.com/*"
     service: default
 
   # send traffic to backend

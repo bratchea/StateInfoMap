@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../static/css/style.css">
-    <title>{{info.state}}</title>
+    <title>{{info.name}}</title>
 </head>
 
 <body>
-    <h1>{{info.state}}</h1>
+    <h1>{{info.name}}</h1>
     <table class="state_table">
         <tr>
             <th>
                 Capital
             </th>
             <td>
-                {{info.capital}}
+                {{ info.capital }}
             </td>
         </tr>
         <tr>
@@ -25,7 +25,7 @@
                 Largest City
             </th>
             <td>
-                {{info.largest_city}}
+                {{ info.largest_city }}
             </td>
         </tr>
         <tr>
@@ -33,7 +33,7 @@
                 Governor
             </th>
             <td>
-                {{info.governor}}
+                {{ info.governor }}
             </td>
         </tr>
         <tr>
@@ -41,7 +41,7 @@
                 Admitted To The Union
             </th>
             <td>
-                {{info.admitted}}
+                {{ info.admitted }}
             </td>
         </tr>
         <tr>
@@ -49,11 +49,12 @@
                 Area (sq. mi.)
             </th>
             <td>
-                {{info.area}}
+                {{ info.area }}
             </td>
         </tr>
     </table>
-    <a href="{{ request.url_root }}us">back to map</a>
+    <a href="{{ request.url_root }}">back to map</a>
+    <img src="{{ image }}" alt="An image from {{ info.name }} ">
 </body>
 
 </html>

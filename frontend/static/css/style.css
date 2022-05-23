@@ -24,6 +24,7 @@ path:hover {
 }
 
 .state_table {
+  width: 30%;
   border: 1px solid;
   border-color: black;
   border-collapse: collapse;
@@ -31,6 +32,7 @@ path:hover {
 
 td,
 th {
+  height: 35px;
   border: 1px solid;
   border-color: black;
 }
@@ -58,4 +60,9 @@ a {
 
 p {
   text-decoration: underline;
+}
+
+img {
+  width: 30%;
+  height: 30%;
 }
