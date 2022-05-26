@@ -24,7 +24,6 @@ path:hover {
 }
 
 .state_table {
-  width: 30%;
   border: 1px solid;
   border-color: black;
   border-collapse: collapse;
@@ -58,11 +57,17 @@ a {
   column-gap: 20px;
 }
 
+.inforow {
+  display: flex;
+  margin: auto;
+  column-gap: 20px;
+}
+
 p {
   text-decoration: underline;
 }
 
 img {
-  width: 30%;
-  height: 30%;
+  margin: inherit;
+  width: 60%;
 }

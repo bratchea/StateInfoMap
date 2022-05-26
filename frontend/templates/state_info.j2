@@ -11,6 +11,8 @@
 
 <body>
     <h1>{{info.name}}</h1>
+    <div class="inforow">
+    <div class="column">
     <table class="state_table">
         <tr>
             <th>
@@ -54,7 +56,11 @@
         </tr>
     </table>
     <a href="{{ request.url_root }}">back to map</a>
+    </div>
+    <div class="column">
     <img src="{{ image }}" alt="An image from {{ info.name }} ">
+    </div>
+    </div>
 </body>
 
 </html>
