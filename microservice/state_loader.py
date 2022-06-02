@@ -15,4 +15,4 @@ for state in ss.STATES:
     clean_state = ss.clean_state_info(raw_state)
     state_obj = State(**clean_state)
     
-    requests.post(url="http://127.0.0.1:8000/states/", json=state_obj.dict())
+    requests.post(url="https://backend-api-dot-state-info-proj.uk.r.appspot.com/states/", json=state_obj.dict())
