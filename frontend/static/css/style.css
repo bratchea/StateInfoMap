@@ -23,6 +23,19 @@ path:hover {
   fill: #3d5467 !important;
 }
 
+#info-box {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  border: black solid 2px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  height: 25px;
+  width: 40px;
+}
+
 .state_table {
   border: 1px solid;
   border-color: black;
