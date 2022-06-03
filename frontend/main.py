@@ -9,6 +9,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
+    """path to home page. Map of the US"""
     with open("static/images/us.svg") as um:
         us_map = um.read()
 
@@ -17,11 +18,13 @@ def home():
 
 @app.route("/list")
 def list_view():
+    """path to list view of states page"""
     return render_template("list_view.j2")
 
 
 @app.route("/state/<state>")
 def state(state):
+    """path to state info page"""
     # make call to state info micro service here
     resp = requests.get(url=f"https://backend-api-dot-state-info-proj.uk.r.appspot.com/states/{state}")
     assert resp.status_code == 200, resp.text
